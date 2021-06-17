@@ -1,0 +1,9 @@
+[
+    { "Skill": "C#", "Proficiency": 5},
+    { "Skill": "SQL", "Proficiency": 5},
+    { "Skill": "Python", "Proficiency": 3},
+    { "Skill": "Javascript", "Proficiency": 4},
+    { "Skill": "Typescript", "Proficiency": 5},
+    { "Skill": "Lua", "Proficiency": 1},
+    { "Skill": "Java", "Proficiency": 3}
+]

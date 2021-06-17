@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Technical Skills</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="print-style.css" media="print" />
+    </head>
+    <body>
+        <nav>
+            <ul class="no-bullet nav">
+                <li>
+                    <a href="about-me.html" class="nav-item">About Me</a>
+                </li>
+                <li>
+                    <a href="technical-skills.html" class="nav-item selected">Technical Skills</a>
+                </li>
+                <li>
+                    <a href="work-experience.html" class="nav-item">Work Experience</a>
+                </li>
+            </ul>
+        </nav>
+        <main class="content" id="app">
+            <header>
+                <h1>Technical Skills</h1>
+            </header>
+            <article>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Skill</th>
+                            <th>Proficiency (1-5)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr v-for="skill in skills" :key="skill.Skill">
+                            <td>{{skill.Skill}}</td>
+                            <td>{{skill.Proficiency}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </main>
+
+        <!-- Load JS last -->
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="ajax.js"></script>
+        <script src="technical-skills.js"></script>
+    </body>
+</html>
