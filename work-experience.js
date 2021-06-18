@@ -1,10 +1,11 @@
 var app = new Vue({
     el: '#app',
     data: { 
-        skills: []
+        logoSquareSize: 25,
+        experiences: []
     },
     mounted() {
-        httpGet("https://tylerlemieux.github.io/cs601-term-project/data/technical-skills.json")
+        httpGet("https://tylerlemieux.github.io/cs601-term-project/data/work-experience.json")
             .then((function(response) {
                 response.forEach(element => {
                     this.app.skills.push(element);
@@ -12,4 +13,5 @@ var app = new Vue({
             }),  error => (alert(error)));
     }
 });
+
 

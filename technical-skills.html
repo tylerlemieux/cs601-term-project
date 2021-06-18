@@ -29,7 +29,7 @@
                 </li>
             </ul>
         </nav>
-        <main class="content">
+        <main class="content" id="app">
             <header>
                 <h1>Technical Skills</h1>
             </header>
@@ -41,12 +41,8 @@
                             <th>Proficiency (1-5)</th>
                         </tr>
                     </thead>
-                    <tbody id="skills">
-                        {{ test }}
-                        
+                    <tbody>                        
                         <tr v-for="skill in skills">
-                            <td>1</td>
-                            <td>{{ skill }}</td>
                             <td>{{skill.Skill}}</td>
                             <td>{{skill.Proficiency}}</td>
                         </tr>

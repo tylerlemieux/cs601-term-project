@@ -1,6 +1,6 @@
 [
-    { "Company": "CA", "Position": "Intern", "Years": 0, "Months": 3 },
-    { "Company": "Cigna", "Position": "Intern", "Years": 2, "Months": 0 },
-    { "Company": "Cigna", "Position": "Junior Application Developer", "Years": 3, "Months": 0 },
-    { "Company": "Cigna", "Position": "Senior Application Developer", "Years": 2, "Months": 0 }
+    { "Company": "CA", "Position": "Intern", "Years": 0, "Months": 3, "ImageLink": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/CA_Technologies_logo.svg/1200px-CA_Technologies_logo.svg.png" },
+    { "Company": "Cigna", "Position": "Intern", "Years": 2, "Months": 0, "ImageLink": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/Cigna_logo.svg/1200px-Cigna_logo.svg.png" },
+    { "Company": "Cigna", "Position": "Junior Application Developer", "Years": 3, "Months": 0, "ImageLink": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/Cigna_logo.svg/1200px-Cigna_logo.svg.png" },
+    { "Company": "Cigna", "Position": "Senior Application Developer", "Years": 2, "Months": 0, "ImageLink": "https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/Cigna_logo.svg/1200px-Cigna_logo.svg.png" }
 ]

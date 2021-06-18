@@ -29,19 +29,24 @@
                 </li>
             </ul>
         </nav>
-        <main class="content">
+        <main class="content" id="app">
             <header>
                 <h1>Work Experience</h1>
             </header>
             <article>
                 <h2>Prior Roles</h2>
                 <ol class="roman">
-                    <li>CA Technologies <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/CA_Technologies_logo.svg/1200px-CA_Technologies_logo.svg.png"  alt="CA Logo" height="25" width="25" /> - Intern</li>
-                    <li>Cigna <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/Cigna_logo.svg/1200px-Cigna_logo.svg.png" alt="Cigna Logo" width="25" height="25" /> - Intern</li>
-                    <li>Cigna <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/Cigna_logo.svg/1200px-Cigna_logo.svg.png" alt="Cigna Logo" width="25" height="25" /> - Junior Application Developer</li>
-                    <li>Cigna <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/Cigna_logo.svg/1200px-Cigna_logo.svg.png" alt="Cigna Logo" width="25" height="25" /> - Senior Application Developer</li>
+                    <li v-for="experience in experiences">
+                        <img v-bind:src="experience.ImageLink"  alt="{{experience.Company}} Logo" v-bind:height="logoSquareSize" v-bind:width="logoSquareSize" /> 
+                        - {{ experience.Position }}: {{ experience.Years }} years and {{ experience.Months }} months.
+                    </li>
                 </ol>
             </article>
         </main>
+
+        <!-- Load JS last -->
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="ajax.js"></script>
+        <script src="work-experience.js"></script>
     </body>
 </html>
