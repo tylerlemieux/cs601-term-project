@@ -8,7 +8,7 @@ var app = new Vue({
         httpGet("https://tylerlemieux.github.io/cs601-term-project/data/work-experience.json")
             .then((function(response) {
                 response.forEach(element => {
-                    this.app.skills.push(element);
+                    this.app.experiences.push(element);
                 });
             }),  error => (alert(error)));
     }

@@ -106,5 +106,17 @@ tr:hover {
     float:right;
 }
 
+.project-content {
+    padding: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.clickable-header:hover {
+    text-decoration: underline;
+}
+
 
  
