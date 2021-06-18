@@ -1,4 +1,6 @@
 
+var selectedLink = "Contact";
+
 function validateFormAndSetMailto(){
     var form = document.getElementById("contact-form");
 

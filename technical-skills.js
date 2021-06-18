@@ -1,3 +1,5 @@
+var selectedLink = "Technical Skills";
+
 var app = new Vue({
     el: '#app',
     data: { 

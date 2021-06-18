@@ -1,31 +1,30 @@
 // Returns a promise 
 function onPageLoaded() {
-    var httpRequest;
 }
 
 var httpGet = (function(url) {
     return new Promise((resolve, reject) => {
-        httpRequest = new XMLHttpRequest();
+        var httpRequest = new XMLHttpRequest();
 
         if(!httpRequest) { 
             alert("Failed to initialize request"); 
             return;
         }
 
-        httpRequest.onreadystatechange = (function() {handleHttpRequestResponse(resolve, reject, url)});
+        httpRequest.onreadystatechange = (function() {handleHttpRequestResponse(resolve, reject, url, httpRequest)});
         httpRequest.open('GET', url);
         httpRequest.send();
     });
 })
 
-var handleHttpRequestResponse = function(resolve, reject, url){
+var handleHttpRequestResponse = function(resolve, reject, url, httpRequest){
     if(httpRequest.readyState == XMLHttpRequest.DONE) {
         if (httpRequest.status == 200) {
             if(url.includes(".json"))
                 var data = JSON.parse(httpRequest.responseText);
             else 
                 var data = httpRequest.responseText;
-                
+
             console.log(data);
             resolve(data);
         } else {

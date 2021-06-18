@@ -1,5 +1,5 @@
 var unshownInterests = ['Programming', 'Board Games', 'Video Games', 'Coffee', 'Star Wars'];
-
+var selectedLink = "About Me";
 function onPageLoaded() {
     var message = document.getElementById('no-more-interests');
     message.hidden = true;

@@ -7,25 +7,10 @@
         <link rel="stylesheet" href="print-style.css" media="print" />
     </head>
     <body>
-        <nav>
+        <nav id="navigation">
             <ul class="no-bullet nav">
-                <li>
-                    <a href="index.html" class="nav-item">Home</a>
-                </li>
-                <li>
-                    <a href="about-me.html" class="nav-item">About Me</a>
-                </li>
-                <li>
-                    <a href="technical-skills.html" class="nav-item">Technical Skills</a>
-                </li>
-                <li>
-                    <a href="work-experience.html" class="nav-item">Work Experience</a>
-                </li>
-                <li>
-                    <a href="personal-projects.html" class="nav-item selected">Personal Projects</a>
-                </li>
-                <li>
-                    <a href="contact.html" class="nav-item">Contact</a>
+                <li v-for="link in links">
+                    <a v-bind:href="link.href" class="nav-item" v-bind:class="{ selected: isSelected(link.name) }">{{link.name}}</a>
                 </li>
             </ul>
         </nav>
@@ -76,6 +61,9 @@
             </article>
         </main>
 
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="ajax.js"></script>
+        <script src="navigation.js"></script>
         <script src="lib/jquery-3.6.0.min.js"></script>
         <script src="personal-projects.js"></script>
     </body>

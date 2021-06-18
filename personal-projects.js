@@ -1,3 +1,5 @@
+var selectedLink = "Personal Projects";
+
 $('#agile-made-simple').click((function() {
     expandOrCollapse('#agile-made-simple-content');
 }));

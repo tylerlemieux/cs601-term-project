@@ -1,1 +1,1 @@
-var selectedLink = '#home-link'
+var selectedLink = 'Home'

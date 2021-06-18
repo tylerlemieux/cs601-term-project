@@ -1,3 +1,5 @@
+var selectedLink = "Work Experience";
+
 var app = new Vue({
     el: '#app',
     data: { 

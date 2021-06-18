@@ -4,11 +4,13 @@ var navigationVue = new Vue({
         links : []
     },
     mounted() {
+        console.log('hit');
         httpGet("https://tylerlemieux.github.io/cs601-term-project/data/navigation.json")
             .then((function(response) {
                 response.forEach(element => {
-                    this.app.links.push(element);
+                    this.navigationVue.links.push(element);
                 });
+
             }),  error => (alert(error)));
     },
     methods: {
