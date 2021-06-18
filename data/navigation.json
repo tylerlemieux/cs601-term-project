@@ -6,24 +6,3 @@
     { "href": "personal-projects.html", "name": "Personal Projects" },
     { "href": "contact.html", "name": "Contact" }
 ]
-
-<ul class="no-bullet nav">
-    <li>
-        <a href="index.html" id="home-link" class="nav-item">Home</a>
-    </li>
-    <li>
-        <a href="about-me.html" id="about-me-link" class="nav-item">About Me</a>
-    </li>
-    <li>
-        <a href="technical-skills.html" id="technical-skills-link" class="nav-item">Technical Skills</a>
-    </li>
-    <li>
-        <a href="work-experience.html" id="work-experience-link" class="nav-item">Work Experience</a>
-    </li>
-    <li>
-        <a href="personal-projects.html" id="personal-projects-link" class="nav-item">Personal Projects</a>
-    </li>
-    <li>
-        <a href="contact.html" id="contact-link" class="nav-item">Contact</a>
-    </li>
-</ul>
