@@ -12,7 +12,7 @@ var httpGet = (function(url) {
             return;
         }
 
-        httpRequest.onreadystatechange = handleHttpRequestResponse(resolve, reject);
+        httpRequest.onreadystatechange = (function() {handleHttpRequestResponse(resolve, reject)});
         httpRequest.open('GET', url);
         httpRequest.send();
     });
@@ -21,7 +21,9 @@ var httpGet = (function(url) {
 var handleHttpRequestResponse = function(resolve, reject){
     if(httpRequest.readyState == XMLHttpRequest.DONE) {
         if (httpRequest.status == 200) {
-            resolve(JSON.parse(httpRequest.responseText));
+            var data = JSON.parse(httpRequest.responseText);
+            console.log(data);
+            resolve(data);
         } else {
             reject(new Error("Error occurred in ajax request"));
         }

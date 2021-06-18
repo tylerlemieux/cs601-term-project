@@ -1,13 +1,16 @@
 var app = new Vue({
-    el: '#app',
+    el: '#skills',
     data() { 
         return { 
+            test: "test",
             skills: null
         }
     },
     mounted() {
-        httpGet("data/technical-skills.json")
-            .then(response => (skills = response),  error => (alert(error)));
+        httpGet("https://tylerlemieux.github.io/cs601-term-project/data/technical-skills.json")
+            .then((function(response) {
+                this.skills = response;
+            }),  error => (alert(error)));
     }
 });
 

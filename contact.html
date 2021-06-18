@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Technical Skills</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="print-style.css" media="print" />
+    </head>
+    <body>
+        <nav>
+            <ul class="no-bullet nav">
+                <li>
+                    <a href="index.html" class="nav-item">Home</a>
+                </li>
+                <li>
+                    <a href="about-me.html" class="nav-item">About Me</a>
+                </li>
+                <li>
+                    <a href="technical-skills.html" class="nav-item">Technical Skills</a>
+                </li>
+                <li>
+                    <a href="work-experience.html" class="nav-item">Work Experience</a>
+                </li>
+                <li>
+                    <a href="personal-projects.html" class="nav-item">Personal Projects</a>
+                </li>
+                <li>
+                    <a href="contact.html" class="nav-item selected">Contact</a>
+                </li>
+            </ul>
+        </nav>
+        <main class="content">
+            <header>
+                <h1>Contact Me</h1>
+            </header>
+            <article>
+                <form id="contact-form" action="mailto:lemex2004@gmail.com" method="get" enctype="text/plain" onsubmit="validateFormAndSetMailto()">
+                    <table class="no-border">
+                        <tr class="no-border">
+                            <td class="no-border">
+                                <label for="name">Your Name*: </label>
+                            </td>
+                            <td class="no-border">
+                                <input type="text" id="name" name="name" required />
+                            </td>
+                        </tr>
+                        <tr class="no-border">
+                            <td class="no-border">
+                                <label for="phone-number">Phone Number <small>(###-###-####)</small>: </label>
+                            </td>
+                            <td class="no-border">
+                                <input type="tel" id="phone-number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" name="phone-number" />
+                            </td>
+                        </tr>
+                        <tr class="no-border">
+                            <td class="no-border">
+                                <label for="message">Message*: </label>
+                            </td>
+                            <td class="no-border">
+                                <input id="message" type="textarea" name="message" required />
+                            </td>
+                        </tr>
+                        <tr class="no-border">
+                            <td class="no-border">
+                                <label for="is-recruiter">I'm a recruiter: </label>
+                            </td>
+                            <td class="no-border">
+                                <input id="is-recruiter" type="checkbox" name="is-recruiter" />
+                            </td>
+                        </tr>
+                        <tr class="no-border">
+                            <td class="no-border">
+                                <label for="can-contact">Can I reach out to you?: </label>
+                            </td>
+                            <td class="no-border">
+                                Yes <input class="can-contact" type="radio" name="can-contact" value="yes" checked />
+                                No <input class="can-contact" type="radio" name="can-contact" value="no" />
+                            </td>
+                        </tr>
+                        <tr class="no-border">
+                            <td class="no-border">
+                                <input type="submit" name="submit-button" value="Submit" />
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </article>
+        </main>
+
+        <!-- Load JS last --><!--
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="ajax.js"></script>
+        <script src="technical-skills.js"></script>-->
+        <script src="contact.js"></script>
+    </body>
+</html>

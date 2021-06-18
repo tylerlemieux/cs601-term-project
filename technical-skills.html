@@ -10,6 +10,9 @@
         <nav>
             <ul class="no-bullet nav">
                 <li>
+                    <a href="index.html" class="nav-item">Home</a>
+                </li>
+                <li>
                     <a href="about-me.html" class="nav-item">About Me</a>
                 </li>
                 <li>
@@ -18,9 +21,15 @@
                 <li>
                     <a href="work-experience.html" class="nav-item">Work Experience</a>
                 </li>
+                <li>
+                    <a href="personal-projects.html" class="nav-item">Personal Projects</a>
+                </li>
+                <li>
+                    <a href="contact.html" class="nav-item">Contact</a>
+                </li>
             </ul>
         </nav>
-        <main class="content" id="app">
+        <main class="content">
             <header>
                 <h1>Technical Skills</h1>
             </header>
@@ -32,8 +41,12 @@
                             <th>Proficiency (1-5)</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr v-for="skill in skills" :key="skill.Skill">
+                    <tbody id="skills">
+                        {{ test }}
+                        
+                        <tr v-for="skill in skills">
+                            <td>1</td>
+                            <td>{{ skill }}</td>
                             <td>{{skill.Skill}}</td>
                             <td>{{skill.Proficiency}}</td>
                         </tr>
