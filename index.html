@@ -8,7 +8,11 @@
     </head>
     <body>
         <nav id="navigation">
-            <div v-html="htmlcontent"></div>
+            <ul class="no-bullet nav">
+                <li v-for="link in links">
+                    <a v-bind:href="link.href" class="nav-item" v-bind:class="{selected: isSelected(link.name) }">{{link.name}}</a>
+                </li>
+            </ul>
         </nav>
         <main class="content">
             <header>
@@ -31,5 +35,7 @@
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
         <script src="ajax.js"></script>
         <script src="navigation.js"></script>
+        <script src="lib/jquery-3.6.0.min.js"></script>
+        <script src="index.js"></script>
     </body>
 </html>
