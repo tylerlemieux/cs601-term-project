@@ -12,16 +12,20 @@ var httpGet = (function(url) {
             return;
         }
 
-        httpRequest.onreadystatechange = (function() {handleHttpRequestResponse(resolve, reject)});
+        httpRequest.onreadystatechange = (function() {handleHttpRequestResponse(resolve, reject, url)});
         httpRequest.open('GET', url);
         httpRequest.send();
     });
 })
 
-var handleHttpRequestResponse = function(resolve, reject){
+var handleHttpRequestResponse = function(resolve, reject, url){
     if(httpRequest.readyState == XMLHttpRequest.DONE) {
         if (httpRequest.status == 200) {
-            var data = JSON.parse(httpRequest.responseText);
+            if(url.includes(".json"))
+                var data = JSON.parse(httpRequest.responseText);
+            else 
+                var data = httpRequest.responseText;
+                
             console.log(data);
             resolve(data);
         } else {
