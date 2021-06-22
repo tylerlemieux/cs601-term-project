@@ -151,5 +151,8 @@ button:hover, input[type="button"]:hover, input[type="submit"]:hover {
     background-color: #ac7196;
 }
 
+.logo {
+    vertical-align: middle;
+}
 
  

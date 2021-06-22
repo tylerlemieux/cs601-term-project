@@ -22,8 +22,12 @@
                 <h2>Prior Roles</h2>
                 <ol class="roman">
                     <li v-for="experience in experiences">
-                        <img v-bind:src="experience.ImageLink"  alt="{{experience.Company}} Logo" v-bind:height="logoSquareSize" v-bind:width="logoSquareSize" /> 
-                        - {{ experience.Position }}: {{ experience.Years }} years and {{ experience.Months }} months.
+                        <img class="logo" v-bind:src="experience.ImageLink"  alt="{{experience.Company}} Logo" v-bind:height="logoSquareSize" v-bind:width="logoSquareSize" /> - {{experience.Company}}
+                        <br />
+                        {{ experience.Position }}
+                        <br />
+                        {{ experience.Years }} years and {{ experience.Months }} months.
+                        <br />
                         <small>{{ experience.TimeWorked }}</small>
                         <ul>
                             <li v-for="note in experience.Notes">{{ note }}</li>
