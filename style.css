@@ -78,20 +78,41 @@ ol.roman{
     list-style-type: upper-roman;
 }
 
-table, th, td{
-    border-collapse: collapse;
+table {
+    border-collapse: separate;
     border: #6F5E5C 2px solid;
+    border-spacing: 0px;
+    border-radius:6px;
+    -moz-border-radius:6px;
 }
 
-th, td { 
+th, td{
+    border-left: #6F5E5C 2px solid;
+    border-top: #6F5E5C 2px solid;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 5px;
     padding-right: 5px;
 }
 
+th {
+    border-top: none;
+}
+
+td:first-child, th:first-child {
+    border-left: none;
+}
+
 tr:hover {
     background-color: #A7A2B9;
+}
+
+.table-striped > tbody > tr:nth-child(even), .table-striped > thead > tr {
+    background-color: #B9BFA8;
+}
+
+.table-striped > tbody > tr:nth-child(even):hover, .table-striped > thead > tr:hover {
+    background-color: #bfa8bd;
 }
 
 .no-border{
@@ -116,6 +137,18 @@ tr:hover {
 
 .clickable-header:hover {
     text-decoration: underline;
+}
+
+button, input[type="button"], input[type="submit"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #4A5240; 
+    color: #000;
+    background-color: #A28497;
+}
+
+button:hover, input[type="button"]:hover, input[type="submit"]:hover {
+    background-color: #ac7196;
 }
 
 

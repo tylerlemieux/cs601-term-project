@@ -2,9 +2,11 @@ var selectedLink = "Work Experience";
 
 var app = new Vue({
     el: '#app',
-    data: { 
-        logoSquareSize: 25,
-        experiences: []
+    data: function() { 
+        return {
+            logoSquareSize: 25,
+            experiences: []
+        }
     },
     mounted() {
         httpGet("https://tylerlemieux.github.io/cs601-term-project/data/work-experience.json")
@@ -15,5 +17,4 @@ var app = new Vue({
             }),  error => (alert(error)));
     }
 });
-
 

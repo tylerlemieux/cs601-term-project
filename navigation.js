@@ -1,7 +1,9 @@
 var navigationVue = new Vue({
     el: '#navigation',
-    data: {
-        links : []
+    data: function() {
+        return {
+            links : []
+        }
     },
     mounted() {
         console.log('hit');

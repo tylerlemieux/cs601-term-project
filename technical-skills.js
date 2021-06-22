@@ -2,8 +2,10 @@ var selectedLink = "Technical Skills";
 
 var app = new Vue({
     el: '#app',
-    data: { 
-        skills: []
+    data: function() {
+        return { 
+            skills: []
+        }
     },
     mounted() {
         httpGet("https://tylerlemieux.github.io/cs601-term-project/data/technical-skills.json")

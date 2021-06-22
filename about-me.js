@@ -15,6 +15,13 @@ var showNextInterest = function() {
         var nextInterest = unshownInterests.splice(0, 1)[0];
 
         interestsList.innerHTML = interestsList.innerHTML + '<li>' + nextInterest + '</li>';
+
+        var nextInterestButton = document.getElementById("show-next-interest");
+        var extraButtonText = " - Click me again!"
+        if(nextInterestButton.innerText.indexOf(extraButtonText) === -1) {
+            nextInterestButton.innerText = nextInterestButton.innerText + extraButtonText;
+        }
+
     } else {
         showNoMoreInterestsMessage();
     }

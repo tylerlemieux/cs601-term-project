@@ -24,6 +24,10 @@
                     <li v-for="experience in experiences">
                         <img v-bind:src="experience.ImageLink"  alt="{{experience.Company}} Logo" v-bind:height="logoSquareSize" v-bind:width="logoSquareSize" /> 
                         - {{ experience.Position }}: {{ experience.Years }} years and {{ experience.Months }} months.
+                        <small>{{ experience.TimeWorked }}</small>
+                        <ul>
+                            <li v-for="note in experience.Notes">{{ note }}</li>
+                        </ul>
                     </li>
                 </ol>
             </article>
